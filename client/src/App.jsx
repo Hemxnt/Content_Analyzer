@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import FileUpload from './components/FileUpload';
 import ResultDisplay from './components/ResultDisplay';
+import logo from './assets/logo.svg';
 
 function App() {
   const [extractedText, setExtractedText] = useState('');
@@ -29,12 +30,18 @@ function App() {
         </a>
       </div>
 
-      <h1 className="text-4xl font-bold mt-10 text-white">CONTENT ANALYZER 🌐</h1>
+      <h1 className="mt-10 text-white text-4xl sm:text-5xl md:text-6xl font-bold text-center">CONTENT ANALYZER 🌐</h1>
 
       {/* About Section */}
-      <div className="mt-10 text-center text-white">
-        <p className="mt-2 ml-20 mr-20 text-xl font-semibold">
-          Content Analyzer is an application developed for Unthinkable Solutions. <br></br> It allows users to upload PDF and image files, and extracts text from them using advanced PDF parsing and OCR technology.
+      <div className="mt-8 px-4 text-center text-white max-w-4xl">
+        <p className="mt-4 md:text-2xl sm:text-lg font-semibold flex items-center justify-center flex-wrap">
+          Content Analyzer is an application developed for&nbsp; 
+          <img
+            src={logo}
+            alt="Unthinkable Solutions Logo"
+            className="h-6 sm:h-8 inline-block mx-2"
+          />
+          It allows users to upload PDF and image files, and extracts text from them using advanced PDF parsing and OCR technology.
         </p>
       </div>
 
