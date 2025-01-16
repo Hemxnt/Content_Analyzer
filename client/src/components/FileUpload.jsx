@@ -3,32 +3,32 @@ import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
 
 function FileUpload({ setExtractedText, setLoading }) {
-  const onDrop = useCallback(
-    acceptedFiles => {
-      const file = acceptedFiles[0];
-      const formData = new FormData();
-      formData.append('file', file);
-
-      setLoading(true);
-
-      axios
+    const onDrop = useCallback(
+        acceptedFiles => {
+          const file = acceptedFiles[0];
+          const formData = new FormData();
+          formData.append('file', file);
+      
+          setLoading(true);
+      
+          axios
         .post('http://localhost:5000/upload', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
         })
-        .then(response => {
-          setExtractedText(response.data.text);
-          setLoading(false);
-        })
-        .catch(error => {
-          console.error('Error uploading file:', error);
-          setLoading(false);
+            .then(response => {
+              setExtractedText(response.data.text);
+              setLoading(false);
+            })
+            .catch(error => {
+              console.error('Error uploading file:', error);
+              setLoading(false);
           alert('Error processing file. Please try again.');
-        });
-    },
+            });
+        },
     [setExtractedText, setLoading],
-  );
+      );
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,

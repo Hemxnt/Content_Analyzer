@@ -19,7 +19,10 @@ const storage = multer.diskStorage({
 });
 
 // Initialize multer with the storage settings
-const upload = multer({ storage: storage });
+const upload = multer({ 
+  storage: storage,
+  limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
+});
 
 // Ensure the uploads directory exists
 if (!fs.existsSync('./uploads/')) {
