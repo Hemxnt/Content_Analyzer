@@ -1,5 +1,6 @@
 # **Content Analyzer**
 
+![image](https://github.com/user-attachments/assets/983dd245-2151-4485-b118-b6b78682dc4d)
 
 ## **Table of Contents**
 
@@ -255,13 +256,6 @@ For any inquiries or support, please contact:
 - **Tailwind CSS** for the utility-first CSS framework.
 - **Node.js** and **Express.js** teams for enabling efficient backend development.
 - **pdf-parse** and **tesseract.js** contributors for the text extraction capabilities.
-
----
-
-# **Screenshots**
-
-![image](https://github.com/user-attachments/assets/983dd245-2151-4485-b118-b6b78682dc4d)
-
 
 ---
 
