@@ -12,7 +12,7 @@ function FileUpload({ setExtractedText, setLoading }) {
           setLoading(true);
       
           axios
-        .post('http://localhost:5000/upload', formData, {
+        .post('https://content-analyzer.onrender.com/upload', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
