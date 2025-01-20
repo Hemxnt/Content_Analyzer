@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import FileUpload from './components/FileUpload';
 import ResultDisplay from './components/ResultDisplay';
-import logo from './assets/logo.svg';
+import Logo from './assets/Logo.svg';
 
 function App() {
   const [extractedText, setExtractedText] = useState('');
@@ -37,7 +37,7 @@ function App() {
         <p className="mt-4 md:text-2xl sm:text-lg font-semibold flex items-center justify-center flex-wrap">
           Content Analyzer is an application developed for&nbsp; 
           <img
-            src={logo}
+            src={Logo}
             alt="Unthinkable Solutions Logo"
             className="h-6 sm:h-8 inline-block mx-2"
           />
